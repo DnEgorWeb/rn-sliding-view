@@ -1,0 +1,44 @@
+{
+  "name": "rn-sliding-view",
+  "version": "1.0.4",
+  "description": "Customizable sliding view for react-native. Supports different positioning and sizes, allows making itself draggable, etc.",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/DnEgorWeb/rn-sliding-view",
+    "type": "git"
+  },
+  "author": "Egor Deriabin <egor19942012@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint index.js"
+  },
+  "dependencies": {
+    "react-native-gesture-responder": "^0.1.1",
+    "react-native-responsive-screen": "^1.2.2",
+    "react-native-status-bar-height": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-flowtype": "^3.11.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "flow-bin": "^0.102.0",
+    "prettier": "^1.18.2"
+  },
+  "homepage": "https://github.com/DnEgorWeb/rn-sliding-view",
+  "keywords": [
+    "react-native",
+    "sliding",
+    "animated",
+    "react",
+    "ios",
+    "android",
+    "panel",
+    "view"
+  ]
+}
