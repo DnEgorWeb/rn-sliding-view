@@ -1,4 +1,7 @@
 # rn-sliding-view
+![npm](https://img.shields.io/npm/v/rn-sliding-view?logo=npm)
+![David](https://img.shields.io/david/DnEgorWeb/rn-sliding-view)
+![NPM](https://img.shields.io/npm/l/rn-sliding-view)
 
 <i>rn-sliding-view</i> is a small customizable library that 
 allows you to add animated sliding views to your screens.
