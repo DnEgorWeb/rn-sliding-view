@@ -147,4 +147,48 @@ describe('RNSlidingView', () => {
       expect(instance.getHeight).toHaveReturnedWith(height + getStatusBarHeight());
     });
   });
+
+  describe('Gesture tests', () => {
+    const component = mount(
+      <RNSlidingView
+        testID="rn-sliding-view"
+        componentVisible={false}
+        position="top"
+        changeVisibilityCallback={() => {}}
+      >
+        <View>
+          <Text>{mocks.loremIpsumText}</Text>
+        </View>
+      </RNSlidingView>,
+    );
+
+    afterAll(() => {
+      component.unmount();
+    });
+
+    const instance = component.instance();
+
+    const evt = {
+      nativeEvent: {
+        touches: {
+          length: 1,
+        },
+      },
+      touchHistory: {
+        numberActiveTouches: 2,
+        mostRecentTimeStamp: 2243594,
+        touchBank: [{}],
+      },
+    };
+    const gestureState = {
+      numberActiveTouches: 2,
+    };
+
+    it('should call pan on responder move', () => {
+      instance.pan = jest.fn();
+      instance.isVertical = jest.fn();
+      instance.Responder.onResponderMove(evt, gestureState);
+      expect(instance.pan).toHaveBeenCalled();
+    });
+  });
 });
