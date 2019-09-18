@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RNSlidingView Only default props should match to snapshot 1`] = `
+<SlidingView
+  animationDuration={300}
+  changeVisibilityCallback={[MockFunction]}
+  componentVisible={false}
+  containerStyle={Object {}}
+  currentPositionX={null}
+  currentPositionY={null}
+  delay={0}
+  disableAutoDragEnd={false}
+  disableDrag={false}
+  height={667}
+  position="bottom"
+  testID="rn-sliding-view"
+  width={750}
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "overflow": "hidden",
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "bottom": -667,
+          "height": 667,
+          "marginBottom": 0,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "bottom": -667,
+          "height": 667,
+          "marginBottom": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "bottom": -667,
+            "height": 667,
+            "marginBottom": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "width": 750,
+          }
+        }
+      >
+        <View>
+          <View>
+            <Text>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </AnimatedComponent>
+</SlidingView>
+`;
