@@ -1,6 +1,6 @@
 {
   "name": "rn-sliding-view",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Customizable sliding view for react-native. Supports different positioning and sizes, allows making itself draggable, etc.",
   "main": "index.js",
   "repository": {

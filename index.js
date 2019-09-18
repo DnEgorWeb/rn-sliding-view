@@ -33,7 +33,9 @@ type Props = {
 };
 
 export default class SlidingView extends Component<Props> {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+
     this.Responder = createResponder({
       onStartShouldSetResponder: () => true,
       onStartShouldSetResponderCapture: () => false,
@@ -47,6 +49,13 @@ export default class SlidingView extends Component<Props> {
       },
       onPanResponderTerminationRequest: () => true,
     });
+  }
+
+  componentDidMount() {
+    const { componentVisible } = this.props;
+    if (componentVisible) {
+      this.toggle();
+    }
   }
 
   componentDidUpdate(prevProps) {

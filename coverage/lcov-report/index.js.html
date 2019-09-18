@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">54.51% </span>
+        <span class="strong">53.65% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>151/277</span>
+        <span class='fraction'>147/274</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">42.14% </span>
+        <span class="strong">42.25% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>59/140</span>
+        <span class='fraction'>60/142</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">54.76% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>23/42</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">49.57% </span>
+        <span class="strong">50.43% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>57/115</span>
+        <span class='fraction'>59/117</span>
       </div>
     </div>
     <p class="quiet">
@@ -311,7 +311,16 @@
 <a name='L263'></a><a href='#L263'>263</a>
 <a name='L264'></a><a href='#L264'>264</a>
 <a name='L265'></a><a href='#L265'>265</a>
-<a name='L266'></a><a href='#L266'>266</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -345,7 +354,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -611,7 +629,9 @@ type Props = {
 };
 &nbsp;
 export default class SlidingView extends Component&lt;Props&gt; {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+&nbsp;
     this.Responder = createResponder({
       onStartShouldSetResponder: () =&gt; true,
       onStartShouldSetResponderCapture: () =&gt; false,
@@ -625,6 +645,13 @@ export default class SlidingView extends Component&lt;Props&gt; {
       },
       onPanResponderTerminationRequest: () =&gt; true,
     });
+  }
+&nbsp;
+  componentDidMount() {
+    const { componentVisible } = this.props;
+    if (componentVisible) {
+      this.toggle();
+    }
   }
 &nbsp;
   componentDidUpdate(prevProps) {
@@ -815,7 +842,7 @@ export default class SlidingView extends Component&lt;Props&gt; {
     else if (position === bottom) positionStyles = { bottom: -height, marginBottom: y, height };
     else positionStyles = { top: -height - getStatusBarHeight(), marginTop: y, height };
     return [defaultStyles, positionStyles, containerStyle];
-  };<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+  };<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
 &nbsp;
   render() {
     const { children, disableDrag } = this.props;
@@ -847,7 +874,7 @@ SlidingView.defaultProps = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Sep 17 2019 22:09:05 GMT+0700 (Indochina Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Sep 18 2019 15:39:52 GMT+0700 (Indochina Time)
 </div>
 </div>
 <script src="prettify.js"></script>
